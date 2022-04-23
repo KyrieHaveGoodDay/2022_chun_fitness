@@ -1,0 +1,149 @@
+nav {
+    position: relative;
+    z-index: 1;
+    .nav_menu {
+     
+        width: 100%;
+        height: 80px;
+        display: flex;
+        //水平置中、分散
+        justify-content: space-around;
+        //垂直置中
+        align-items: center;
+        padding: 10px 0;
+        box-shadow: 0 5px 5px #ccc;
+        // 固定
+        position: fixed;
+        // 層級
+        z-index: 999;
+        background: $main_color;
+        color: #fff;
+        @media screen and (max-width: $phone_plus) {
+            height: 60px;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+        a {
+            text-decoration: none;
+            font-family: $main_font;
+            color: #fff;
+            font-size: 34px;
+            transition: all 0.5s;
+            &:hover {
+                filter: invert(60%) sepia(4%) saturate(3078%) hue-rotate(345deg) brightness(90%) contrast(90%);
+            }
+        }
+        
+        .menu_data{
+            display: flex;
+            gap: 10px;
+            @media screen and (max-width: $phone_plus) {
+                display: none;
+            }
+            .introduction{
+                position: relative;
+                cursor: pointer;
+                
+                &:hover{
+                    .introduction_menu{
+                        display: block;
+                        
+                    }
+                }
+                .introduction_title{
+                    width: 120px;
+                    text-align: center;
+                    font-family: $main_font;
+                }
+                
+                .introduction_menu{
+                    position: absolute;
+                    // left: -15px;
+                    background: $main_second_color;
+                    color: #fff;
+                    width: 100%;
+                    display: none;
+                    padding: 20px;
+                    
+                    a{
+                        font-size: 16px;
+                        p{
+                            margin-bottom: 10px;
+                            transition: all 0.5s;
+                            text-align: center;
+                            font-family: $main_font;
+                            &:hover{
+                                background: #aaa;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+        
+    }
+}
+.nav_img {
+    @media screen and (max-width: $phone_plus) {
+        display: none;
+    }
+    a {
+        transition: 0.2s;
+        margin: 0 10px;
+        &:hover {
+            filter: invert(24%) sepia(92%) saturate(1716%) hue-rotate(24deg) brightness(94%) contrast(101%);
+        }
+
+        @media screen and (max-width: $phone_plus) {
+            margin: 0 5px;
+        }
+        img {
+            width: 32px;
+            height: 32px;
+            @media screen and (max-width: $phone_plus) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
+
+.menu {
+    display: none;
+    @media screen and (max-width: $phone_plus) {
+        display: block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}
+
+// 手機版選單
+.mb_menu{
+    display: none;
+    @media screen and(max-width:$phone_plus){
+        display: block;
+    
+    width: 80%;
+    // border: 1px solid #ccc;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    background: rgba(255,255,255,0.5);
+    .mb_menu_data{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .back{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+}
+}

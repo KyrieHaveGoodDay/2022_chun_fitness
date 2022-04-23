@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=BhuTuka+Expanded+One&family=League+Gothic&display=swap");
+$main_font: "Bebas Neue", cursive;
+$ipad: 768px;
+$phone_plus: 414px;
+$main_color:#161a1d;
+$main_second_color:#660708;
+
+@import "nav";
