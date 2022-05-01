@@ -1,0 +1,43 @@
+.banner{
+    position: relative;
+    padding-top: 80px;
+    @media screen and (max-width: $phone_plus) {
+        padding-top: 60px;
+    }
+    .banner_data{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: #fff;
+        z-index: 20;
+        font-size: 36px;
+    }
+    .swiper-wrapper{
+        .swiper-slide{
+            width: 100%;
+            height: 100vh;
+            
+        }
+    }
+}
+.slick{
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: $ipad) {
+        width: 100%;
+        height: 100vh;
+    }
+    @media screen and (max-width: $phone_plus) {
+        display: none;
+    }
+}
+.slick_mb{
+    display: none;
+    @media screen and (max-width: $phone_plus) {
+        display: block;
+        object-fit:cover;
+        width: 100%;
+        height: 100vh;
+    }
+}

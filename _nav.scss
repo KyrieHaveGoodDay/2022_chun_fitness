@@ -1,8 +1,7 @@
 nav {
     position: relative;
-    z-index: 1;
+    z-index: 999;
     .nav_menu {
-     
         width: 100%;
         height: 80px;
         display: flex;
@@ -11,7 +10,7 @@ nav {
         //垂直置中
         align-items: center;
         padding: 10px 0;
-        box-shadow: 0 5px 5px #ccc;
+        // box-shadow: 0 5px 5px #ccc;
         // 固定
         position: fixed;
         // 層級
@@ -33,30 +32,29 @@ nav {
                 filter: invert(60%) sepia(4%) saturate(3078%) hue-rotate(345deg) brightness(90%) contrast(90%);
             }
         }
-        
-        .menu_data{
+
+        .menu_data {
             display: flex;
             gap: 10px;
             @media screen and (max-width: $phone_plus) {
                 display: none;
             }
-            .introduction{
+            .introduction {
                 position: relative;
                 cursor: pointer;
-                
-                &:hover{
-                    .introduction_menu{
+
+                &:hover {
+                    .introduction_menu {
                         display: block;
-                        
                     }
                 }
-                .introduction_title{
+                .introduction_title {
                     width: 120px;
                     text-align: center;
                     font-family: $main_font;
                 }
-                
-                .introduction_menu{
+
+                .introduction_menu {
                     position: absolute;
                     // left: -15px;
                     background: $main_second_color;
@@ -64,25 +62,22 @@ nav {
                     width: 100%;
                     display: none;
                     padding: 20px;
-                    
-                    a{
+
+                    a {
                         font-size: 16px;
-                        p{
+                        p {
                             margin-bottom: 10px;
                             transition: all 0.5s;
                             text-align: center;
                             font-family: $main_font;
-                            &:hover{
+                            &:hover {
                                 background: #aaa;
                             }
                         }
                     }
-                    
                 }
             }
         }
-        
-        
     }
 }
 .nav_img {
@@ -121,29 +116,53 @@ nav {
 }
 
 // 手機版選單
-.mb_menu{
+.mb_menu {
     display: none;
-    @media screen and(max-width:$phone_plus){
+    @media screen and(max-width:$phone_plus) {
         display: block;
-    
-    width: 80%;
-    // border: 1px solid #ccc;
-    height: 100vh;
-    position: fixed;
-    right: 0;
-    z-index: 10;
-    background: rgba(255,255,255,0.5);
-    .mb_menu_data{
-        position: relative;
-        width: 100%;
-        height: 100%;
-        .back{
-            width: 40px;
-            height: 40px;
-            position: absolute;
-            right: 10px;
-            top: 10px;
+        width: 80%;
+        // border: 1px solid #ccc;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        z-index:1000;
+        background: rgba(255, 255, 255, 0.5);
+        // 移出去
+        transform: translateX(100%);
+        transition: all 0.5s;
+        .mb_menu_data {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .back {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+            .one_menu{
+                padding-top: 60px;
+                h3{
+                    font-size: 36px;
+                    text-align: center;
+                }
+                ul{
+                    list-style: none;
+                    li{
+                        text-align: center;
+                        margin-bottom: 10px;
+
+                        a{
+                            text-decoration: none;
+                            color: #000;
+                            padding: 10px;
+                            font-size: 24px;
+                            
+                        }
+                    }
+                }
+            }
         }
     }
-}
 }
