@@ -26,9 +26,12 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-
+// 啟動
 template(0, 'mainData');
 template(1, 'mainData');
+template(2, 'mainData');
+
+
 function template(index , divId) {
     // console.log(datas[item].bgi);
     let divIdMain = document.getElementById(divId)
@@ -70,9 +73,12 @@ function template(index , divId) {
     divIdMain.innerHTML += str;
 
 
-    
+    // 模板輸出後渲染經歷
     for(item in datas[index].experience){
-        console.log( datas[index].experience[item]);
+        // console.log( datas[index].experience[item]);
+
+        
+        // 抓取這筆物件的ul ID 渲染
         $('#'+datas[index].expId+'').append('<li>'+datas[index].experience[item]+'</li>')
     }
 
