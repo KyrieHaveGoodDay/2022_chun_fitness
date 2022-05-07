@@ -25,3 +25,55 @@ var swiper = new Swiper(".mySwiper", {
         disableOnInteraction: false,
     },
 });
+
+
+template(0, 'mainData');
+template(1, 'mainData');
+function template(index , divId) {
+    // console.log(datas[item].bgi);
+    let divIdMain = document.getElementById(divId)
+    let str = '';
+    
+    str = `
+    
+        <div class="self" >
+        <!-- 上半部資訊 -->
+        <div class="introduction" style="background-image: url(img/${datas[index].bgi});">
+            <h3>${datas[index].name}</h3>
+        </div>
+        <!-- 下半部資訊 -->
+        <div class="introduction_data">
+            <div class="data">
+                <p>經歷</p>
+                <hr>
+                <ul id="${datas[index].expId}">
+
+                </ul>
+            </div>
+            <div class="data">
+                <p>介紹</p>
+                <hr>
+                <ul>
+                    <li>${datas[index].introduce}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+        
+        `
+
+        
+
+    // console.log(str);
+
+    divIdMain.innerHTML += str;
+
+
+    
+    for(item in datas[index].experience){
+        console.log( datas[index].experience[item]);
+        $('#'+datas[index].expId+'').append('<li>'+datas[index].experience[item]+'</li>')
+    }
+
+}

@@ -272,7 +272,6 @@ nav .nav_menu .menu_data .introduction .introduction_menu a p:hover {
 }
 
 .self .introduction {
-  background-image: url(./img/introduce1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 -100px;

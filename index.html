@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    
+
 </head>
 
 <body>
@@ -130,14 +130,14 @@
         </div>
     </div>
 
-    <div class="size">
+    <div id="mainData" class="size">
         <!-- 每一個人的介紹 -->
-        <div class="self">
-            <!-- 上半部資訊 -->
-            <div class="introduction">
+        <!-- <div class="self" >
+            
+            <div class="introduction" style="background-image: url(img/introduce1.jpg);">
                 <h3>巨石強森</h3>
             </div>
-            <!-- 下半部資訊 -->
+            
             <div class="introduction_data">
                 <div class="data">
                     <p>經歷</p>
@@ -154,15 +154,17 @@
                     <p>介紹</p>
                     <hr>
                     <ul>
-                        <li>德威恩·道格拉斯·強森（英語：Dwayne Douglas Johnson，1972年5月2日－）或稱為巨石（英語：The Rock），是一名美國職業摔角手、演員和製片人。父為非洲裔加拿大人，母為太平洋的美屬薩摩亞人。
+                        <li>德威恩·道格拉斯·強森（英語：Dwayne Douglas Johnson，1972年5月2日－）或稱為巨石（英語：The
+                            Rock），是一名美國職業摔角手、演員和製片人。父為非洲裔加拿大人，母為太平洋的美屬薩摩亞人。
                             曾是邁阿密大學美式足球隊一員的他，曾帶領邁阿密颶風隊贏得1991年國家錦標賽，隨後進軍加拿大美式足球聯盟卡爾加里狂奔者隊，踏入1995年賽季兩個月退出。而後受祖父彼得·馬維亞和父親洛克·強森的影響，以「洛克·馬維亞」為名走上職業摔角生涯，後來因在1996年到2004年間擔任世界摔角聯盟麾下選手「巨石」聲名大噪，他是公司史上首位三代摔角選手。2011年到2013年曾短暫回歸WWE。
-                            他是7次WWE冠軍強森被視為史上最偉大的摔角選手之一。他在WWE建立17次冠軍王朝，包括8次WWE（F）冠軍和兩次WCW/世界冠軍。他還贏得兩次WWE洲際冠軍和五次WWE雙打冠軍，是WWE第六位三冠王，以及2000年皇家大戰優勝者。</li>
+                            他是7次WWE冠軍強森被視為史上最偉大的摔角選手之一。他在WWE建立17次冠軍王朝，包括8次WWE（F）冠軍和兩次WCW/世界冠軍。他還贏得兩次WWE洲際冠軍和五次WWE雙打冠軍，是WWE第六位三冠王，以及2000年皇家大戰優勝者。
+                        </li>
                     </ul>
                 </div>
             </div>
-        </div>
-        
-        
+        </div> -->
+
+
     </div>
 
 
@@ -170,28 +172,43 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'
         integrity='sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=='
         crossorigin='anonymous'></script>
-    
+
     <script>
         // 個人特質
         let datas = [
             {
-                bgi:'introduce1.jpg',
-                color:'#fff',
-                name:'巨石強森',
-                box:{
-                    text:'111',
-                    text2:'222',
-                }
+                bgi: 'introduce1.jpg',
+                color: '#fff',
+                name: '巨石強森',
+                expId:'data1',
+                experience: [
+                    '1999年擂台之外',
+                    '2001年遠射',
+                    '1990- something',
+                    '2002年魔蠍大帝',
+                    '2003年浴血叢林'
+                ],
+                introduce: '德威恩·道格拉斯·強森（英語：Dwayne Douglas Johnson，1972年5月2日－）或稱為巨石（英語：The Rock），是一名美國職業摔角手、演員和製片人。父為非洲裔加拿大人，母為太平洋的美屬薩摩亞人。 曾是邁阿密大學美式足球隊一員的他，曾帶領邁阿密颶風隊贏得1991年國家錦標賽，隨後進軍加拿大美式足球聯盟卡爾加里狂奔者隊，踏入1995年賽季兩個月退出。而後受祖父彼得·馬維亞和父親洛克·強森的影響，以「洛克·馬維亞」為名走上職業摔角生涯，後來因在1996年到2004年間擔任世界摔角聯盟麾下選手「巨石」聲名大噪，他是公司史上首位三代摔角選手。2011年到2013年曾短暫回歸WWE。 他是7次WWE冠軍強森被視為史上最偉大的摔角選手之一。他在WWE建立17次冠軍王朝，包括8次WWE（F）冠軍和兩次WCW/世界冠軍。他還贏得兩次WWE洲際冠軍和五次WWE雙打冠軍，是WWE第六位三冠王，以及2000年皇家大戰優勝者。'
 
             },
             {
-                bgi:'',
-                name:'巨石強森',
+                bgi: 'introduce1.jpg',
+                color: '#fff',
+                name: '巨石強森111',
+                expId:'data2',
+                experience: [
+                    '1999年擂台之外',
+                    '2001年遠射',
+                    '1990- something',
+                    '2002年魔蠍大帝',
+                    '2003年浴血叢林111'
+                ],
+                introduce: '德威恩·道格拉斯·強森（英語：Dwayne Douglas Johnson，1972年5月2日－）或稱為巨石（英語：The Rock），是一名美國職業摔角手、演員和製片人。父為非洲裔加拿大人，母為太平洋的美屬薩摩亞人。 曾是邁阿密大學美式足球隊一員的他，曾帶領邁阿密颶風隊贏得1991年國家錦標賽，隨後進軍加拿大美式足球聯盟卡爾加里狂奔者隊，踏入1995年賽季兩個月退出。而後受祖父彼得·馬維亞和父親洛克·強森的影響，以「洛克·馬維亞」為名走上職業摔角生涯，後來因在1996年到2004年間擔任世界摔角聯盟麾下選手「巨石」聲名大噪，他是公司史上首位三代摔角選手。2011年到2013年曾短暫回歸WWE。 他是7次WWE冠軍強森被視為史上最偉大的摔角選手之一。他在WWE建立17次冠軍王朝，包括8次WWE（F）冠軍和兩次WCW/世界冠軍。他還贏得兩次WWE洲際冠軍和五次WWE雙打冠軍，是WWE第六位三冠王，以及2000年皇家大戰優勝者。'
 
-            }
+            },
         ]
-        console.log(datas[0].box);
-        
+        // console.log(datas[0].experience.length);
+
     </script>
     <script src="./all.js"></script>
 </body>
