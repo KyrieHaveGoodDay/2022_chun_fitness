@@ -1,0 +1,44 @@
+.self {
+    background: #fff;
+    margin-top: 20px;
+    .introduction{
+        background-image: url(./img/introduce1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        // 調整照片角度
+        background-position: 0 -100px;
+        height: 400px;
+        @media screen and (max-width: $phone_plus) {
+            background-position: 0 0;
+        }
+        h3{
+            margin: 30px;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 40px;
+            border: 1px solid #fff;
+            display: inline-block;
+        }
+        
+    }
+    .introduction_data{
+        .data{
+            padding: 0 10px;
+            p{
+                font-size: 36px;
+                font-weight: bold;
+            }
+            hr{
+                margin: 5px 0;
+            }
+            ul{
+                list-style-type: none;
+                li{
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}

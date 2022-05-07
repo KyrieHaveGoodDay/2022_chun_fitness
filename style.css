@@ -265,4 +265,65 @@ nav .nav_menu .menu_data .introduction .introduction_menu a p:hover {
     height: 100vh;
   }
 }
+
+.self {
+  background: #fff;
+  margin-top: 20px;
+}
+
+.self .introduction {
+  background-image: url(./img/introduce1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -100px;
+  height: 400px;
+}
+
+@media screen and (max-width: 414px) {
+  .self .introduction {
+    background-position: 0 0;
+  }
+}
+
+.self .introduction h3 {
+  margin: 30px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 40px;
+  border: 1px solid #fff;
+  display: inline-block;
+}
+
+.self .introduction_data .data {
+  padding: 0 10px;
+}
+
+.self .introduction_data .data p {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.self .introduction_data .data hr {
+  margin: 5px 0;
+}
+
+.self .introduction_data .data ul {
+  list-style-type: none;
+}
+
+.self .introduction_data .data ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+body {
+  background: #eee;
+}
+
+.size {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=style.css.map */

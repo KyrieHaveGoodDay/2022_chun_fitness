@@ -13,4 +13,16 @@ $main_second_color:#660708;
 
 @import "nav";
 @import "banner";
+@import "introduction";
+body{
+    background: #eee;
+}
 
+
+.size{
+    width: 1200px;
+    max-width: 100%;
+    // border: 1px solid #000; 
+    margin: 0 auto;
+    // height: 100vh;
+}
