@@ -1,3 +1,9 @@
+// 當網頁元素準備好後
+$(document).ready(function(){
+    // do something
+    $('.wrapp_main').fadeOut(500);
+})
+
 $('#menu').click(function () {
     $('.mb_menu').css('transform', 'translateX(0)')
     $('#menu').css('display', 'none')
@@ -38,7 +44,7 @@ function dataman(index,divID){
 
     let str=" ";
     str=`
-    <div class="self" >
+    <div id="${datas[index].mainId}" class="self" >
     <!-- 上半部資訊 -->
     <div class="introduction" style="background-image: url(img/${datas[index].bgi});">
         <h3>${datas[index].name}</h3>
